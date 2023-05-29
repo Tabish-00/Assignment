@@ -1,10 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const guestList = ["Ali", "Umer", "Aisha", "Talha"];
-const guest1 = "Ali";
-const guest2 = "Aisha";
-// Changing Guest List
+const guest2 = "Ali";
+const guest5 = "Aisha";
 const guest3 = "Umer";
+// Shrinking Guest List:
+// Add a new line that prints a message saying that you can invite only two people for dinner.  
+guestList.unshift("hamza");
+const guest1 = "hamza";
+//  Add one new guest to the middle of your array. 
+guestList.splice(3, 0, "Tariq");
+const guest4 = "Tariq";
+//  add one new guest to the end of your list. 
+guestList.push("Komal");
+const guest6 = "Komal";
+// console.log(guestList)
 for (let i = 0; i < guestList.length; i++) {
     const guestName = guestList[i];
     const message = `Dear ${guestName},\n\n` +
@@ -17,6 +27,15 @@ for (let i = 0; i < guestList.length; i++) {
     }
     else if (guestName === guest2) {
         console.log(`Sending an email to ${guestName}...`);
+    }
+    else if (guestName === guest5) {
+        console.log(`sorry you can’t invite them to dinner ${guestName}...`);
+    }
+    else if (guestName === guest6) {
+        console.log(`sorry you can’t invite them to dinner ${guestName}...`);
+    }
+    else if (guestName === guest4) {
+        console.log(`sorry you can’t invite them to dinner ${guestName}...`);
     }
     else if (guestName === guest3) {
         console.log(`${guestName} is unable to make the dinner.`);

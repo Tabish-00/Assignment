@@ -1,6 +1,7 @@
 const guestList: string[] = ["Ali", "Umer", "Aisha", "Talha"];
 const guest1: string = "Ali";
 const guest2: string = "Aisha";
+                     // Changing Guest List
 const guest3: string = "Umer";
 
 for (let i = 0; i < guestList.length; i++) {

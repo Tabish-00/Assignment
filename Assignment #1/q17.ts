@@ -3,8 +3,8 @@ const guest2: string = "Ali";
 const guest5: string = "Aisha";
 const guest3: string = "Umer";
 
-                  // More Guests
-                // Add one new guest to the beginning of your array. 
+                  // Shrinking Guest List:
+                // Add a new line that prints a message saying that you can invite only two people for dinner.  
 
 guestList.unshift("hamza");
 const guest1: string = "hamza";
@@ -32,15 +32,15 @@ for (let i = 0; i < guestList.length; i++) {
   
   }
   else if (guestName === guest5) {
-    console.log(`Sending an email to ${guestName}...`);
+    console.log(`sorry you can’t invite them to dinner ${guestName}...`);
   
   }
   else if (guestName === guest6) {
-    console.log(`Sending an email to ${guestName}...`);
+    console.log(`sorry you can’t invite them to dinner ${guestName}...`);
   
   }
   else if (guestName === guest4) {
-    console.log(`Sending an email to ${guestName}...`);
+    console.log(`sorry you can’t invite them to dinner ${guestName}...`);
   
   }
   else if (guestName === guest3) {

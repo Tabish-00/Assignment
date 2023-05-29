@@ -1,57 +1,48 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// Define the guest list
-const guestList = [
-    {
-        name: "Ali",
-        occupation: "Artist and inventor",
-        alive: false,
-    },
-    {
-        name: "Umer",
-        occupation: "Physicist",
-        alive: false,
-    },
-    {
-        name: "Aisha",
-        occupation: "Theoretical physicist and cosmologist",
-        alive: false,
-    },
-    {
-        name: "Mustafa",
-        occupation: "Entrepreneur and engineer",
-        alive: true,
-    },
-];
-// Print the name of the guest who can't make it
-const guestWhoCantMakeIt = "Aisha";
-console.log(`Unfortunately, ${guestWhoCantMakeIt} can't make it to the dinner.`);
-// Find the index of the guest who can't make it
-const indexToRemove = guestList.findIndex(guest => guest.name === guestWhoCantMakeIt);
-// Check if the guest to remove exists in the list
-if (indexToRemove !== -1) {
-    // Remove the guest who can't make it and add a new guest
-    guestList.splice(indexToRemove, 1, {
-        name: "Talha",
-        occupation: "Inventor and electrical engineer",
-        alive: false,
-    });
-}
-else {
-    console.log(`${guestWhoCantMakeIt} was not found in the guest list.`);
-}
-// Send invitations to each remaining guest
-for (const guest of guestList) {
-    const message = `Dear ${guest.name},\n\n` +
+const guestList = ["Ali", "Umer", "Aisha", "Talha"];
+const guest2 = "Ali";
+const guest5 = "Aisha";
+const guest3 = "Umer";
+// More Guests
+// Add one new guest to the beginning of your array. 
+guestList.unshift("hamza");
+const guest1 = "hamza";
+//  Add one new guest to the middle of your array. 
+guestList.splice(3, 0, "Tariq");
+const guest4 = "Tariq";
+//  add one new guest to the end of your list. 
+guestList.push("Komal");
+const guest6 = "Komal";
+// console.log(guestList)
+for (let i = 0; i < guestList.length; i++) {
+    const guestName = guestList[i];
+    const message = `Dear ${guestName},\n\n` +
         `I would like to invite you to dinner at my place.\n` +
-        `As a ${guest.occupation}, I believe you would be a fascinating guest to have at the table.\n` +
+        `I believe you would be a fascinating guest to have at the table.\n` +
         `Please let me know if you are available and interested in joining us.\n\n` +
         `Best regards,\nYour Host`;
-    if (guest.alive) {
-        console.log(`Sending an email to ${guest.name}...`);
-        // Here you can add code to send an email to the guest
+    if (guestName === guest1) {
+        console.log(`Sending an email to ${guestName}...`);
     }
+    else if (guestName === guest2) {
+        console.log(`Sending an email to ${guestName}...`);
+    }
+    else if (guestName === guest5) {
+        console.log(`Sending an email to ${guestName}...`);
+    }
+    else if (guestName === guest6) {
+        console.log(`Sending an email to ${guestName}...`);
+    }
+    else if (guestName === guest4) {
+        console.log(`Sending an email to ${guestName}...`);
+    }
+    else if (guestName === guest3) {
+        console.log(`${guestName} is unable to make the dinner.`);
+    }
+    // Handle the case when guest1 can't make it
     else {
-        console.log(`Sorry, ${guest.name} has passed away.`);
+        console.log(`${guestName} has passed away.`);
+        // Handle the case when all other guests are attending
     }
 }
